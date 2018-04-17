@@ -1,9 +1,10 @@
 @import './variables';
 
-body, html{
+body, html {
   font-family: 'Lato', Arial, sans-serif;
   color: $primary-text;
   width: 100%;
+  margin: 0;
 }
 
 h1 {
@@ -12,4 +13,18 @@ h1 {
 
 h2 {
   font-size: 200%;
+}
+
+h2.subheading {
+  margin-top: 0;
+}
+
+.wrapper {
+  padding: 10px;
+}
+
+span {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 1em;
 }
