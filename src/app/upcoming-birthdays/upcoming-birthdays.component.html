@@ -1,0 +1,11 @@
+<section class="background-wrapper">
+  <div class="wrapper">
+    <span><h2 class="subheading">Upcoming Birthdays</h2> <small>Next 2 weeks</small></span>
+    <div class="content">
+      <div class="card" *ngFor="let birthday of birthdays">
+        <h2 id="name">{{birthday.name}}</h2>
+        <h3 id="dob">{{birthday.birthday | date: 'longDate'}}</h3>
+      </div>
+    </div>
+  </div>
+</section>

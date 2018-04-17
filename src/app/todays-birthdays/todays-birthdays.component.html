@@ -3,10 +3,10 @@
   <span><h2 class="subheading">Todays Birthdays </h2> <small id="todays-date">{{date | date: 'longDate'}}</small></span>
 
   <div class="content">
-  <div class="card" *ngFor="let birthday of birthdays">
-    <h2 id="name">{{birthday.name}}</h2>
-    <h3 id="dob">{{birthday.birthday | date: 'longDate'}}</h3>
-  </div>
+    <div class="card" *ngFor="let birthday of birthdays">
+      <h2 id="name">{{birthday.name}}</h2>
+      <h3 id="dob">{{birthday.birthday | date: 'longDate'}}</h3>
+    </div>
   </div>
 </div>
 
