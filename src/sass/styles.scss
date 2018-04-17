@@ -1,0 +1,15 @@
+@import './variables';
+
+body, html{
+  font-family: 'Lato', Arial, sans-serif;
+  color: $primary-text;
+  width: 100%;
+}
+
+h1 {
+  font-size: 250%;
+}
+
+h2 {
+  font-size: 150%;
+}
