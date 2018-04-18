@@ -1,0 +1,11 @@
+@import '~sass/variables';
+
+.background-wrapper{
+  background-color: $primary-background;
+  min-height: 0 !important;
+}
+
+.interact-btn {
+  display: flex;
+  align-self: flex-end;
+}

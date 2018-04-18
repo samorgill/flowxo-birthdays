@@ -10,23 +10,23 @@ import {Birthday} from '../service/birthday-model';
 export class SearchComponent implements OnInit {
 
   search: string;
+  cleared: boolean = true;
   birthdays: Birthday[];
 
   constructor(private birthdayService: BirthdayService) { }
 
   ngOnInit() {
-    // this.birthdayService.getBirthdays().forEach((birthday) =>{
-    //   if(birthday.name === this.search){
-    //     this.birthdays.push(birthday);
-    //     console.log(birthday + ' added');
-    //   }
-    // });
   }
 
   onEnter(value: string){
+    this.cleared = false;
     this.search = value;
     this.birthdays = this.birthdayService.searchBirthdays(this.search);
-    console.log('Returned array ', this.birthdays);
+    this.search = '';
+  }
+
+  onClear(){
+    this.cleared = true;
   }
 
 }

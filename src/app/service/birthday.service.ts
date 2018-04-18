@@ -10,7 +10,7 @@ export class BirthdayService {
   upcomingBirthdays: Birthday[] = [];
   myBirthdays: Birthday[] = [];
   searchResults: Birthday[] = [];
-  filteredSearch: Birthday[] =[];
+  filteredSearch: Birthday[] = [];
   date: Date;
 
   constructor(public datepipe: DatePipe) {
@@ -159,7 +159,8 @@ export class BirthdayService {
   }
 
   searchBirthdays(name): Birthday[] {
-    console.log(name);
+    this.searchResults = [];
+    this.filteredSearch = [];
 
     this.todaysBirthdays.forEach((birthday) => {
       if (birthday.name.includes(name)) {
@@ -177,7 +178,7 @@ export class BirthdayService {
       }
     });
 
-    this.filteredSearch =  Array.from(new Set(this.searchResults));
+    this.filteredSearch = Array.from(new Set(this.searchResults));
 
     return this.filteredSearch;
   }

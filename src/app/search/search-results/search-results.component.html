@@ -1,0 +1,19 @@
+<section class="background-wrapper">
+  <div class="wrapper">
+    <span class="subheading-span"><h2 class="subheading">Search Results</h2> <small>Next 2 weeks</small></span>
+    <div class="content">
+      <div class="card" *ngFor="let birthday of birthdays">
+        <div class="main">
+          <h2 class="name">{{birthday.name}}</h2>
+          <h3 xlass="dob">{{birthday.birthday | date: 'longDate'}}</h3>
+          <div class="detail">
+            <div class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}} days.</div>
+          </div>
+        </div>
+        <div class="interact-btn">
+          <div (click)="addBirthday(birthday)" class="add-to-my-birthdays">+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

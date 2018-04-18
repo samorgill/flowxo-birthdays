@@ -14,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import {MaterialModule} from './material.module';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {CustomSnackbarComponent} from './custom-snackbar/custom-snackbar.component';
+import {SearchResultsComponent} from './search/search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {CustomSnackbarComponent} from './custom-snackbar/custom-snackbar.compone
     UpcomingBirthdaysComponent,
     MyBirthdaysComponent,
     AddBirthdayComponent,
-    CustomSnackbarComponent
+    CustomSnackbarComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,

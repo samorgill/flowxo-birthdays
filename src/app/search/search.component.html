@@ -1,4 +1,6 @@
-<div class="wrapper search-wrapper">
+<form class="wrapper search-wrapper" #searchForm="ngForm">
   <label for="search"></label>
   <input #box (keyup.enter)="onEnter(box.value)" type="text" class="search-box" id="search" placeholder="search">
-</div>
+  <button type="reset" value="clear" id="clear-box" (click)="cleared = true">x</button>
+</form>
+<app-search-results [birthdays]="birthdays" (click)="onClear()" *ngIf="cleared == false"></app-search-results>

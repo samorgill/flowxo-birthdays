@@ -15,8 +15,15 @@
   background-color: $secondary-background;
   padding-top: 0 !important;
   //font-size: 150%;
+  display: flex;
+  justify-content: center;
 }
 
 span {
   padding-top: 0;
+}
+
+#btn-add{
+  align-self: flex-end;
+  margin-bottom: 13px;
 }
