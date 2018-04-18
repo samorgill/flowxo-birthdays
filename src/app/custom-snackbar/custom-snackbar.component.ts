@@ -6,6 +6,6 @@ import {Component} from '@angular/core';
   styleUrls: ['./custom-snackbar.component.scss']
 })
 
-export class CustomSnackbarComponent{
+export class CustomSnackbarComponent {
   added = 'added';
 }

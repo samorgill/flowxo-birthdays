@@ -14,7 +14,7 @@ export class SearchResultsComponent {
   constructor(private birthdayService: BirthdayService) {
   }
 
-  addBirthday(birthday){
+  addBirthday(birthday) {
     this.birthdayService.addBirthday(birthday);
   }
 

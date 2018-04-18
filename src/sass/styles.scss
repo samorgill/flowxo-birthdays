@@ -82,7 +82,6 @@ h2.subheading {
   margin-bottom: 7px;
 }
 
-
 h2.name {
   font-size: 150%;
 }
@@ -107,11 +106,11 @@ small {
 }
 
 .time-to-next {
-  font-size: 130%;
+  font-size: 180%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  padding-top: 2em;
+  padding-top: 1.5em;
   color: $secondary-background
 }
 
@@ -139,6 +138,10 @@ small {
 
   .submit {
     width: 100%;
+  }
+
+  h2 {
+    font-size: 180%
   }
 
 

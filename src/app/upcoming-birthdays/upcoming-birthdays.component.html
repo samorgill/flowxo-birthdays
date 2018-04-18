@@ -7,7 +7,11 @@
           <h2 class="name">{{birthday.name}}</h2>
           <h3 xlass="dob">{{birthday.birthday | date: 'longDate'}}</h3>
           <div class="detail">
-            <div class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}} days.</div>
+            <div *ngIf="birthday.timeToNext > 1" class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}}
+              days.
+            </div>
+            <div *ngIf="birthday.timeToNext == 1" class="time-to-next">{{birthday.age +1}} tomorrow!</div>
+            <div *ngIf="birthday.timeToNext == 0" class="time-to-next">{{birthday.age}} today!</div>
           </div>
         </div>
         <div class="interact-btn">

@@ -77,4 +77,59 @@ export const BIRTHDAYS: Birthday[] =
       birthday: '1973-04-17',
       age: 0
     },
+    {
+      name: 'Steve Irwin',
+      birthday: '1965-04-19',
+      age: 0
+    },
+    {
+      name: 'Paul Scholes',
+      birthday: '1976-04-20',
+      age: 0
+    },
+    {
+      name: 'Dave Banks',
+      birthday: '1954-04-20',
+      age: 0
+    },
+    {
+      name: 'Julian Singh',
+      birthday: '1954-04-21',
+      age: 0
+    },
+    {
+      name: 'Sam Leigh',
+      birthday: '1998-04-21',
+      age: 0
+    },
+    {
+      name: 'Matt Jones',
+      birthday: '1998-04-22',
+      age: 0
+    },
+    {
+      name: 'Elaine Sadler',
+      birthday: '1998-04-22',
+      age: 0
+    },
+    {
+      name: 'Lucy Beale',
+      birthday: '1998-04-23',
+      age: 0
+    },
+    {
+      name: 'Theresa Hay',
+      birthday: '1998-04-23',
+      age: 0
+    },
+    {
+      name: 'Ronald Flump',
+      birthday: '1998-04-24',
+      age: 0
+    },
+    {
+      name: 'Samir Nasri',
+      birthday: '1998-04-24',
+      age: 0
+    },
   ];

@@ -96,7 +96,9 @@ export class BirthdayService {
 
     BIRTHDAYS.forEach((birthday) => {
 
-      birthday.timeToNext = this.timeToNext(birthday);
+      let timeBetween = this.timeToNext(birthday);
+
+      birthday.timeToNext = timeBetween;
 
       let isUpcoming = this.isUpcoming(birthday);
 
@@ -145,18 +147,24 @@ export class BirthdayService {
   }
 
   timeToNext(birthday): number {
-    let now = new Date()
-    now.setHours(0);
-    now.setMinutes(0);
-    now.setSeconds(0);
-    now.setMilliseconds(0);
 
-    let thisMonth = now.getDay();
-    let bday = new Date(birthday.birthday);
-    let bdayDay = bday.getDay();
+    let now = new Date(Date.now());
+    let mydate = new Date(birthday.birthday);
 
-    return thisMonth + bdayDay;
-  }
+    let timeBetweenBirthToday = (now.getTime() - mydate.getTime()) / 1000;
+    console.log('my date ', timeBetweenBirthToday);
+
+    let nextBirthday = new Date();
+    nextBirthday.setFullYear(2018, mydate.getMonth(), mydate.getDate())
+
+    let timeBetweenBirthBirthday = (nextBirthday.getTime() - mydate.getTime()) / 1000;
+
+    let calcMins = (timeBetweenBirthBirthday - timeBetweenBirthToday) / 60;
+    let calcHrs = calcMins / 60;
+    let calcDays = calcHrs / 24;
+
+    return Math.round(calcDays);
+  };
 
   searchBirthdays(name): Birthday[] {
     this.searchResults = [];

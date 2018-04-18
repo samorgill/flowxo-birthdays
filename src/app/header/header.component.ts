@@ -11,12 +11,13 @@ export class HeaderComponent implements OnInit {
 
   @Output() showAddBirthday = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
-  showAdd(){
+  showAdd() {
     this.showAddBirthday.emit(true);
   }
 

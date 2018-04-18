@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BirthdayService} from '../service/birthday.service';
 import {Birthday} from '../service/birthday-model';
 
@@ -13,19 +13,20 @@ export class SearchComponent implements OnInit {
   cleared: boolean = true;
   birthdays: Birthday[];
 
-  constructor(private birthdayService: BirthdayService) { }
+  constructor(private birthdayService: BirthdayService) {
+  }
 
   ngOnInit() {
   }
 
-  onEnter(value: string){
+  onEnter(value: string) {
     this.cleared = false;
     this.search = value;
     this.birthdays = this.birthdayService.searchBirthdays(this.search);
     this.search = '';
   }
 
-  onClear(){
+  onClear() {
     this.cleared = true;
   }
 

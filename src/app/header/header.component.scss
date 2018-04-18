@@ -1,6 +1,6 @@
 @import '~sass/variables';
 
-.header-wrapper{
+.header-wrapper {
   //position: fixed;
   //width: 100%;
   //height: 120px;
@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: baseline;
   color: $secondary-text;
-  background-color:$primary-text;
+  background-color: $primary-text;
 }
 
 #btn-add {
@@ -23,7 +23,7 @@ span {
   padding-top: 0;
 }
 
-#btn-add{
+#btn-add {
   align-self: flex-end;
   margin-bottom: 13px;
 }

@@ -22,7 +22,7 @@ export class UpcomingBirthdaysComponent implements OnInit {
     this.birthdayService.addBirthday(birthday);
   }
 
-  removeBirthday(birthday){
+  removeBirthday(birthday) {
     this.birthdayService.removeBirthday(birthday);
   }
 }
