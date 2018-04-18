@@ -1,0 +1,130 @@
+@import '~sass/variables';
+
+form {
+  margin-top: 7px;
+}
+
+.add-wrapper {
+  color: $primary-text;
+  background-color: $primary-background;
+  margin-bottom: 2em;
+  width: 98.5%;
+}
+
+.content {
+  padding: 20px;
+}
+
+#input-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 120%;
+  color: $primary-text;
+  padding-bottom: 8px;
+}
+
+.text {
+  font-size: 100%;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+
+.submit {
+  font-size: 9px;
+}
+
+input {
+  border: 0;
+  height: 30px;
+  box-shadow: 0.5px 0.5px 2px #363434 inset;
+  border-radius: 1px;
+  outline: none;
+  font-size: 16px;
+}
+
+::-webkit-input-placeholder {
+  font-family: inherit;
+  text-align: left;
+  font-size: 16px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: left;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  text-align: left;
+}
+
+:-ms-input-placeholder {
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#name,
+#dob {
+  width: 20%;
+  margin-bottom: 1em;
+  padding: 2px 2% 2px 2% !important;
+}
+
+#name {
+  padding-left: 10px;
+}
+
+.submit {
+  font-size: 100%;
+}
+
+button {
+  border: 0;
+  background-color: $secondary-background;
+  height: 32px;
+  width: 20%;
+  padding: 0;
+  color: $secondary-text;
+  font-weight: bolder;
+  font-size: 100%;
+  box-shadow: 1px 1px 1px #363434;
+  border-radius: 1px;
+  margin-bottom: 1em;
+  min-width: 200px;
+  min-height: 40px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: red !important;
+}
+
+button:disabled {
+  background-color: $secondary-background !important;
+  opacity: 0.6;
+  cursor: initial;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .submit {
+    width: 100% !important;
+  }
+
+  .form-control {
+    width: 97.5% !important;
+  }
+
+}
