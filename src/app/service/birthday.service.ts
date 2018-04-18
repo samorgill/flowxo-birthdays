@@ -8,6 +8,7 @@ export class BirthdayService {
 
   todaysBirthdays: Birthday[] = [];
   upcomingBirthdays: Birthday[] = [];
+  myBirthdays: Birthday[] = [];
   date: Date;
 
   constructor(public datepipe: DatePipe) {
@@ -55,4 +56,7 @@ export class BirthdayService {
     return this.upcomingBirthdays;
   }
 
+  getMyBirthdays(){
+    return this.myBirthdays;
+  }
 }

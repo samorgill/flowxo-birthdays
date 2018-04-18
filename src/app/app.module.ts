@@ -9,6 +9,7 @@ import { TodaysBirthdayCardComponent } from './todays-birthdays/todays-birthday-
 import {BirthdayService} from './service/birthday.service';
 import {DatePipe} from '@angular/common';
 import { UpcomingBirthdaysComponent } from './upcoming-birthdays/upcoming-birthdays.component';
+import { MyBirthdaysComponent } from './my-birthdays/my-birthdays.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UpcomingBirthdaysComponent } from './upcoming-birthdays/upcoming-birthd
     HeaderComponent,
     SearchComponent,
     TodaysBirthdaysComponent,
-    UpcomingBirthdaysComponent
+    UpcomingBirthdaysComponent,
+    MyBirthdaysComponent
   ],
   imports: [
     BrowserModule

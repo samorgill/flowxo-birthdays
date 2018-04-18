@@ -20,20 +20,30 @@ h2.subheading {
 }
 
 .wrapper {
-  padding: 10px;
+  padding: 0 10px 0 10px;
 }
 
 span {
   display: flex;
   align-items: baseline;
-  margin-bottom: 1em;
+  padding-top: 1.5em;
 }
 
 .background-wrapper {
   width: 100%;
   margin: 0;
-  padding: 0;
+  min-height: 400px;
+  padding-bottom: 2em;
 }
+
+
+.background-wrapper.red {
+  background-color: $secondary-background;
+}
+
+.wrapper.red {
+   color: $secondary-text;
+ }
 
 .card {
   justify-content: center;
