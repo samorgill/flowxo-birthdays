@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper search-wrapper">
   <label for="search"></label>
-  <input type="text" class="search-box" id="search" placeholder="search">
+  <input #box (keyup.enter)="onEnter(box.value)" type="text" class="search-box" id="search" placeholder="search">
 </div>

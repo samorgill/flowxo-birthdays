@@ -1,0 +1,21 @@
+.search-wrapper{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.search-box {
+  width: 100%;
+  align-self: center;
+  border-radius: 5px;
+}
+
+input {
+  border: 0;
+  height: 30px;
+  box-shadow: 0.5px 0.5px 2px #363434 inset;
+  border-radius: 1px;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+}

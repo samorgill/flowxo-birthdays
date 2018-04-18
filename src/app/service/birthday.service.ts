@@ -9,6 +9,8 @@ export class BirthdayService {
   todaysBirthdays: Birthday[] = [];
   upcomingBirthdays: Birthday[] = [];
   myBirthdays: Birthday[] = [];
+  searchResults: Birthday[] = [];
+  filteredSearch: Birthday[] =[];
   date: Date;
 
   constructor(public datepipe: DatePipe) {
@@ -57,8 +59,6 @@ export class BirthdayService {
         if (item === birthday) this.myBirthdays.splice(index, 1);
       });
     }
-
-
   }
 
   getTodaysBirthdays(): Birthday[] {
@@ -157,4 +157,29 @@ export class BirthdayService {
 
     return thisMonth + bdayDay;
   }
+
+  searchBirthdays(name): Birthday[] {
+    console.log(name);
+
+    this.todaysBirthdays.forEach((birthday) => {
+      if (birthday.name.includes(name)) {
+        this.searchResults.push(birthday);
+      }
+    });
+    this.upcomingBirthdays.forEach((birthday) => {
+      if (birthday.name.includes(name)) {
+        this.searchResults.push(birthday);
+      }
+    });
+    this.myBirthdays.forEach((birthday) => {
+      if (birthday.name.includes(name)) {
+        this.searchResults.push(birthday);
+      }
+    });
+
+    this.filteredSearch =  Array.from(new Set(this.searchResults));
+
+    return this.filteredSearch;
+  }
+
 }
