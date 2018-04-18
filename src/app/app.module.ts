@@ -11,6 +11,9 @@ import {UpcomingBirthdaysComponent} from './upcoming-birthdays/upcoming-birthday
 import {MyBirthdaysComponent} from './my-birthdays/my-birthdays.component';
 import {AddBirthdayComponent} from './add-birthday/add-birthday.component';
 import {FormsModule} from '@angular/forms';
+import {MaterialModule} from './material.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {CustomSnackbarComponent} from './custom-snackbar/custom-snackbar.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,21 @@ import {FormsModule} from '@angular/forms';
     TodaysBirthdaysComponent,
     UpcomingBirthdaysComponent,
     MyBirthdaysComponent,
-    AddBirthdayComponent
+    AddBirthdayComponent,
+    CustomSnackbarComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MaterialModule
   ],
+  entryComponents: [
+  CustomSnackbarComponent
+],
   providers: [BirthdayService, DatePipe],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,6 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Birthday} from '../service/birthday-model';
 import {BirthdayService} from '../service/birthday.service';
+import {MatSnackBar} from '@angular/material';
+import {SentComponent} from '../sent/sent.component';
 
 @Component({
   selector: 'app-add-birthday',
@@ -12,7 +14,9 @@ export class AddBirthdayComponent implements OnInit {
   name: string;
   dob: string;
 
-  constructor(private birthdayService: BirthdayService) {
+  @Output() addSubmitted = new EventEmitter<boolean>();
+
+  constructor(private birthdayService: BirthdayService, public snackBar: MatSnackBar) {
   }
 
   ngOnInit() {
@@ -30,7 +34,7 @@ export class AddBirthdayComponent implements OnInit {
   }
 
   onSubmit() {
-
+    this.addSubmitted.emit(true);
   }
 
 }

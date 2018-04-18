@@ -1,25 +1,24 @@
 <section class="wrapper">
   <div class="add-wrapper">
-    <h2>Add a Birthday</h2>
+    <!--<h2>Add a Birthday</h2>-->
     <form (ngSubmit)="onSubmit()" class="form" #addForm>
       <div id="input-wrapper">
 
         <div class="form-group">
-          <label for="name" class="labels"></label>
-          <input type="text" placeholder="name"
+          <label for="name" class="labels">Name</label>
+          <input matInput type="text" placeholder="name"
                  class="form-control" name="fname" id="name" required
                  [(ngModel)]="name"/>
         </div>
 
         <div class="form-group">
-          <label for="dob" class="labels"></label>
-          <input type="date" placeholder="date of birth"
+          <label for="dob" class="labels">Date of Birth</label>
+          <input matInput type="date" placeholder="date of birth"
                  class="form-control" id="dob" required name="DOB" required
                  [(ngModel)]="dob"/>
         </div>
       </div>
-
-      <button type="submit" class="button" (click)="addBirthday(); addForm.reset()">Add Birthday</button>
+      <button mat-button type="submit" class="button" (click)="addBirthday(); addForm.reset()">Add Birthday</button>
     </form>
   </div>
 </section>

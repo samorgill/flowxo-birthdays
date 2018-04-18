@@ -4,11 +4,22 @@ form {
   margin-top: 7px;
 }
 
+.form-control {
+  min-width: 193px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .add-wrapper {
   color: $primary-text;
   background-color: $primary-background;
   margin-bottom: 2em;
   width: 98.5%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .content {
