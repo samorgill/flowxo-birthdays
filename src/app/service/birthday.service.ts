@@ -19,17 +19,46 @@ export class BirthdayService {
   }
 
   addBirthday(birthday) {
-    console.log('bday added ', birthday);
 
-    let isToday = this.isTodayBirthday(birthday);
-    if (isToday) {
-      this.todaysBirthdays.push(birthday);
+    if (!this.todaysBirthdays.includes(birthday)) {
+      let isToday = this.isTodayBirthday(birthday);
+
+      if (isToday) {
+        this.todaysBirthdays.push(birthday);
+      }
     }
-    let isUpcoming = this.isUpcoming(birthday)
-    if (isUpcoming) {
-      this.upcomingBirthdays.push(birthday);
+
+    if (!this.upcomingBirthdays.includes(birthday)) {
+      let isUpcoming = this.isUpcoming(birthday)
+      if (isUpcoming) {
+        this.upcomingBirthdays.push(birthday);
+      }
     }
+
     this.myBirthdays.push(birthday);
+  }
+
+  removeBirthday(birthday) {
+
+    if (this.todaysBirthdays.includes(birthday)) {
+      this.todaysBirthdays.forEach((item, index) => {
+        if (item === birthday) this.todaysBirthdays.splice(index, 1);
+      });
+    }
+
+    if (this.upcomingBirthdays.includes(birthday)) {
+      this.upcomingBirthdays.forEach((item, index) => {
+        if (item === birthday) this.upcomingBirthdays.splice(index, 1);
+      });
+    }
+
+    if (this.myBirthdays.includes(birthday)) {
+      this.myBirthdays.forEach((item, index) => {
+        if (item === birthday) this.myBirthdays.splice(index, 1);
+      });
+    }
+
+
   }
 
   getTodaysBirthdays(): Birthday[] {

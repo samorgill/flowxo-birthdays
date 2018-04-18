@@ -20,6 +20,14 @@ export class TodaysBirthdaysComponent implements OnInit {
     this.birthdays = this.birthdayService.getTodaysBirthdays();
   }
 
+  addBirthday(birthday){
+    this.birthdayService.addBirthday(birthday);
+  }
+
+  removeBirthday(birthday){
+    this.birthdayService.removeBirthday(birthday);
+  }
+
   getAge(birthday) {
     this.age = this.birthdayService.getAge(birthday);
   }

@@ -17,4 +17,12 @@ export class UpcomingBirthdaysComponent implements OnInit {
   ngOnInit() {
     this.birthdays = this.birthdayService.getUpcomingBirthdays();
    }
+
+  addBirthday(birthday){
+    this.birthdayService.addBirthday(birthday);
+  }
+
+  removeBirthday(birthday){
+    this.birthdayService.removeBirthday(birthday);
+  }
 }

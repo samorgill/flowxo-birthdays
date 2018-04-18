@@ -4,9 +4,15 @@
       id="todays-date">{{date | date: 'longDate'}}</small></span>
     <div class="content">
       <div class="card" *ngFor="let birthday of birthdays">
+        <div class="main">
         <h2 class="name">{{birthday.name}}</h2>
         <h3 class="dob">{{birthday.birthday | date: 'longDate'}}</h3>
         <h3 class="age">{{birthday.age}}</h3>
+        </div>
+        <div class="interact-btn">
+          <div (click)="removeBirthday(birthday)" class="remove">x</div>
+          <div (click)="addBirthday(birthday)" class="add-to-my-birthdays">+</div>
+        </div>
       </div>
     </div>
   </div>

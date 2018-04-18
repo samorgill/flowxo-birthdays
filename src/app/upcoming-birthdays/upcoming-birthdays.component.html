@@ -3,10 +3,16 @@
     <span class="subheading-span"><h2 class="subheading">Upcoming Birthdays</h2> <small>Next 2 weeks</small></span>
     <div class="content">
       <div class="card" *ngFor="let birthday of birthdays">
-        <h2 class="name">{{birthday.name}}</h2>
-        <h3 xlass="dob">{{birthday.birthday | date: 'longDate'}}</h3>
-        <div class="detail">
-          <div class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}} days.</div>
+        <div class="main">
+          <h2 class="name">{{birthday.name}}</h2>
+          <h3 xlass="dob">{{birthday.birthday | date: 'longDate'}}</h3>
+          <div class="detail">
+            <div class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}} days.</div>
+          </div>
+        </div>
+        <div class="interact-btn">
+          <div (click)="removeBirthday(birthday)" class="remove">x</div>
+          <div (click)="addBirthday(birthday)" class="add-to-my-birthdays">+</div>
         </div>
       </div>
     </div>

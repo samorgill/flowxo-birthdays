@@ -1,12 +1,17 @@
 <div class="background-wrapper red">
   <div class="wrapper red">
-    <span><h2 class="subheading">My Birthdays</h2></span>
+    <span class="subheading-span"><h2 class="subheading">My Birthdays</h2></span>
     <div class="content">
       <div class="card" *ngFor="let birthday of birthdays">
-        <h2 id="name">{{birthday.name}}</h2>
-        <h3 id="dob">{{birthday.birthday | date: 'longDate'}}</h3>
-        <div class="detail">
-          <div class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}} days.</div>
+        <div class="main">
+          <h2 class="name">{{birthday.name}}</h2>
+          <h3 class="dob">{{birthday.birthday | date: 'longDate'}}</h3>
+          <div class="detail">
+            <div class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}} days.</div>
+          </div>
+        </div>
+        <div class="interact-btn">
+          <div (click)="removeBirthday(birthday)" class="remove">x</div>
         </div>
       </div>
     </div>

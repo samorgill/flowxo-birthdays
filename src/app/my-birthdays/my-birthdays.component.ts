@@ -17,4 +17,8 @@ export class MyBirthdaysComponent implements OnInit {
     this.birthdays = this.birthdayService.getMyBirthdays();
   }
 
+  removeBirthday(birthday){
+    this.birthdayService.removeBirthday(birthday);
+  }
+
 }

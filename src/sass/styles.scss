@@ -45,7 +45,8 @@ h2.subheading {
 }
 
 .card {
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   line-height: 1px;
   box-shadow: 0 1px 0.2px #959595;
   -webkit-box-shadow: 0.2px 1px 1px 0.2px #959595;
@@ -55,7 +56,31 @@ h2.subheading {
   color: $primary-text;
   background-color: $primary-background;
   padding-left: 10px;
+  white-space: normal;
+  overflow: hidden;
 }
+
+.interact-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  margin: 5px 5px 8px 0;
+  align-items: flex-end;
+}
+
+.remove {
+  color: $primary-text;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.add-to-my-birthdays {
+  color: $secondary-background;
+  font-size: 150%;
+  margin-bottom: 7px;
+}
+
 
 h2.name {
   font-size: 150%;
