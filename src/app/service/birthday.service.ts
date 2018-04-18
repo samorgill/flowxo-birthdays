@@ -13,12 +13,7 @@ export class BirthdayService {
   filteredSearch: Birthday[] = [];
   date: Date;
 
-  constructor(public datepipe: DatePipe) {
-  }
-
-  getBirthdays(): Birthday[] {
-    return BIRTHDAYS;
-  }
+  constructor(public datepipe: DatePipe) {}
 
   addBirthday(birthday) {
 
@@ -70,10 +65,8 @@ export class BirthdayService {
       let isBdayToday = this.isTodayBirthday(birthday);
 
       if (isBdayToday) {
-        console.log('true');
         this.todaysBirthdays.push(birthday);
       } else {
-        console.log('false')
       }
     });
 
@@ -152,7 +145,6 @@ export class BirthdayService {
     let mydate = new Date(birthday.birthday);
 
     let timeBetweenBirthToday = (now.getTime() - mydate.getTime()) / 1000;
-    console.log('my date ', timeBetweenBirthToday);
 
     let nextBirthday = new Date();
     nextBirthday.setFullYear(2018, mydate.getMonth(), mydate.getDate())
