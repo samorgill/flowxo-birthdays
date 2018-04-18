@@ -5,6 +5,9 @@
       <div class="card" *ngFor="let birthday of birthdays">
         <h2 id="name">{{birthday.name}}</h2>
         <h3 id="dob">{{birthday.birthday | date: 'longDate'}}</h3>
+        <div class="detail">
+          <div class="time-to-next">{{birthday.age +1}} in {{birthday.timeToNext}} days.</div>
+        </div>
       </div>
     </div>
   </div>

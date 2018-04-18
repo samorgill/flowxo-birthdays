@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BirthdayService} from '../service/birthday.service';
 import {Birthday} from '../service/birthday-model';
 
@@ -10,16 +10,19 @@ import {Birthday} from '../service/birthday-model';
 export class TodaysBirthdaysComponent implements OnInit {
 
   birthdays: Birthday[];
+  age: number;
   date = Date.now();
 
-  constructor(private birthdayService: BirthdayService) { }
+  constructor(private birthdayService: BirthdayService) {
+  }
 
   ngOnInit() {
     this.birthdays = this.birthdayService.getTodaysBirthdays();
   }
 
-
-
+  getAge(birthday) {
+    this.age = this.birthdayService.getAge(birthday);
+  }
 
 
 }

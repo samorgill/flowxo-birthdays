@@ -1,18 +1,9 @@
+@import '~sass/variables';
+
 .wrapper {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: baseline;
+  color: $secondary-text;
+  background-color:$primary-text;
 }
-
-.add-wrapper {
-  padding: 10px;
-  margin-bottom: 1.5em;
-}
-
-#add-birthday {
-  display: flex;
-  justify-content: flex-start;
-}
-
-
-
